@@ -6,13 +6,12 @@ public class person {
 
     public String name;
     public int age;
-    public String position;
 
 
-    public person(String name, int age,String position) {
+    public person(String name, int age) {
         this.name = name;
         this.age = age;
-        this.position = position;
+
     }
 
     public String getName() {
@@ -30,16 +29,12 @@ public class person {
     public void setAge(int age) {
         this.age = age;
     }
-
-    public String getPosition() {
-        return position;
+    // Kişinin bilgilerini yazdıran toString metodu
+    @Override
+    public String toString() {
+        return name + " (" + age + " years old)";
     }
 
-    public void setPosition(String position) {
-        this.position = position;
-    }
 
-    public void personPosition() {
-        System.out.println("name: "+name+"\n"+"age: "+age+"\n"+ "position: " + position);
-    }
+
 }
